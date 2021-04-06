@@ -1,8 +1,6 @@
-package biydaalt;
+package biydaalt.ui;
 
 import javax.swing.*;
-import javax.swing.border.EmptyBorder;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -54,6 +52,15 @@ public class registerProduct{
         productCount.setColumns(10);
 
         JButton button = new JButton("Бүртгэх");
+
+        button.setBounds(58,297,120,23);
+        frame.getContentPane().add(button);
+        JButton buttonCancel = new JButton("Буцах");
+        buttonCancel.setBounds(238,297,120,23);
+        frame.getContentPane().add(buttonCancel);
+        frame.setVisible(true);
+
+
         button.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -61,9 +68,12 @@ public class registerProduct{
             }
         });
 
-        button.setBounds(58,297,120,23);
-        frame.getContentPane().add(button);
-        frame.setVisible(true);
+        buttonCancel.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                frame.setVisible(false);
+            }
+        });
     }
 
 
